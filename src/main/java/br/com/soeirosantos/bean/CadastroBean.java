@@ -25,11 +25,11 @@ public class CadastroBean implements Serializable {
 	private Participante participante = new Participante();
 
 	public Participante getParticipante() {
-		return participante;
+		return this.participante;
 	}
 	
 	public List<Participante> getParticipantes() {
-		return participantes.listaTodos();
+		return this.participantes.listaTodos();
 	}
 	
 	public void gravar(ActionEvent event) {

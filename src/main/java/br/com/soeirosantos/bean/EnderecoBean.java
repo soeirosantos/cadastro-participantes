@@ -32,9 +32,9 @@ public class EnderecoBean implements Serializable {
 	
 	public List<UF> getUfs() {
 		if (ufs == null) {
-			ufs = entityManager.createQuery("select uf from UF uf order by uf.sigla", UF.class).getResultList();
+			this.ufs = entityManager.createQuery("select uf from UF uf order by uf.sigla", UF.class).getResultList();
 		}
-		return ufs;
+		return this.ufs;
 	}
 
 	public void atualizaCidades(AjaxBehaviorEvent event) {
@@ -72,7 +72,7 @@ public class EnderecoBean implements Serializable {
 	}
 	
 	public UF getUf() {
-		return uf;
+		return this.uf;
 	}
 	
 	public void setUf(UF uf) {
@@ -80,7 +80,7 @@ public class EnderecoBean implements Serializable {
 	}
 
 	public Cidade getCidade() {
-		return cidade;
+		return this.cidade;
 	}
 
 	public void setCidade(Cidade cidade) {
